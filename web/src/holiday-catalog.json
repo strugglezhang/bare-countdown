@@ -1,0 +1,197 @@
+[
+  {
+    "value": "oktoberfest",
+    "label": "啤酒节",
+    "description": "麦芽金 · 啤酒杯",
+    "title": "啤酒节，值得期待",
+    "theme": "amber",
+    "icon": "sparkles",
+    "art": "beer",
+    "group": "world",
+    "rule": "oktoberfest",
+    "dateNote": "以慕尼黑啤酒节传统开幕日预填；具体日程可按主办方公告调整。",
+    "message": "举杯，让快乐像泡沫一样溢出来。"
+  },
+  {
+    "value": "thanksgiving",
+    "label": "感恩节",
+    "description": "枫糖棕 · 丰收南瓜",
+    "title": "感恩节，值得期待",
+    "theme": "amber",
+    "icon": "sparkles",
+    "art": "harvest",
+    "group": "world",
+    "rule": "thanksgiving",
+    "dateNote": "按美国感恩节：11 月第四个星期四。",
+    "message": "把感谢说出口，把温暖留在餐桌上。"
+  },
+  {
+    "value": "carnival",
+    "label": "狂欢节",
+    "description": "假面紫 · 羽毛假面",
+    "title": "狂欢节，值得期待",
+    "theme": "violet",
+    "icon": "sparkles",
+    "art": "mask",
+    "group": "world",
+    "rule": "carnival",
+    "dateNote": "以狂欢周二（Mardi Gras）为目标；不同城市庆典日期可手动调整。",
+    "message": "戴上面具，卸下拘束，让今天尽情闪耀。"
+  },
+  {
+    "value": "dayofdead",
+    "label": "亡灵节",
+    "description": "万寿菊橙 · 彩绘骷髅",
+    "title": "亡灵节，值得期待",
+    "theme": "amber",
+    "icon": "sparkles",
+    "art": "skull",
+    "group": "world",
+    "month": 11,
+    "day": 2,
+    "dateNote": "以墨西哥亡灵节 11 月 2 日为目标，庆典常跨 11 月 1–2 日。",
+    "message": "记得的人，就从未真正离开。"
+  },
+  {
+    "value": "sanfermin",
+    "label": "奔牛节",
+    "description": "红巾白 · 红巾公牛",
+    "title": "奔牛节，值得期待",
+    "theme": "rose",
+    "icon": "sparkles",
+    "art": "bull",
+    "group": "world",
+    "month": 7,
+    "day": 6,
+    "dateNote": "以潘普洛纳圣费尔明节 7 月 6 日开幕为目标；奔牛活动从 7 月 7 日开始。",
+    "message": "红巾迎风，奔赴属于夏天的热烈。"
+  },
+  {
+    "value": "gion",
+    "label": "京都祇园祭",
+    "description": "绀青朱 · 山鉾花车",
+    "title": "京都祇园祭，值得期待",
+    "theme": "ocean",
+    "icon": "sparkles",
+    "art": "float",
+    "group": "world",
+    "month": 7,
+    "day": 17,
+    "dateNote": "以京都祇园祭 7 月 17 日前祭山鉾巡行为目标；后祭为 7 月 24 日。",
+    "message": "灯笼照亮古都，风铃摇响夏日。"
+  },
+  {
+    "value": "lantern",
+    "label": "元宵节",
+    "description": "灯火红 · 节日限定",
+    "title": "元宵节，值得期待",
+    "theme": "rose",
+    "icon": "sparkles",
+    "art": "lantern",
+    "group": "china",
+    "lunar": [
+      1,
+      15
+    ],
+    "message": "一碗汤圆，一城灯火，愿所念皆团圆。"
+  },
+  {
+    "value": "qingming",
+    "label": "清明节",
+    "description": "柳芽青 · 节日限定",
+    "title": "清明节，值得期待",
+    "theme": "mint",
+    "icon": "sparkles",
+    "art": "willow",
+    "group": "china",
+    "table": true,
+    "message": "春风拂柳，把思念轻轻安放。"
+  },
+  {
+    "value": "qixi",
+    "label": "七夕节",
+    "description": "鹊桥紫 · 节日限定",
+    "title": "七夕节，值得期待",
+    "theme": "violet",
+    "icon": "sparkles",
+    "art": "birds",
+    "group": "china",
+    "lunar": [
+      7,
+      7
+    ],
+    "message": "跨过星河，还是想与你相见。"
+  },
+  {
+    "value": "double9",
+    "label": "重阳节",
+    "description": "菊花金 · 节日限定",
+    "title": "重阳节，值得期待",
+    "theme": "amber",
+    "icon": "sparkles",
+    "art": "chrysanthemum",
+    "group": "china",
+    "lunar": [
+      9,
+      9
+    ],
+    "message": "登高望远，岁岁安康，久久相伴。"
+  },
+  {
+    "value": "laba",
+    "label": "腊八节",
+    "description": "暖粥棕 · 节日限定",
+    "title": "腊八节，值得期待",
+    "theme": "amber",
+    "icon": "sparkles",
+    "art": "bowl",
+    "group": "china",
+    "lunar": [
+      12,
+      8
+    ],
+    "message": "一碗热粥，把冬天熬成温柔。"
+  },
+  {
+    "value": "eve",
+    "label": "除夕",
+    "description": "岁末红 · 节日限定",
+    "title": "除夕，值得期待",
+    "theme": "rose",
+    "icon": "sparkles",
+    "art": "firecracker",
+    "group": "china",
+    "lunar": [
+      1,
+      1
+    ],
+    "table": true,
+    "message": "辞旧迎新，灯火长明，围坐就是团圆。"
+  },
+  {
+    "value": "national",
+    "label": "国庆节",
+    "description": "锦绣红 · 节日限定",
+    "title": "国庆节，值得期待",
+    "theme": "rose",
+    "icon": "sparkles",
+    "art": "flag",
+    "group": "china",
+    "month": 10,
+    "day": 1,
+    "message": "山河锦绣，盛世如愿。"
+  },
+  {
+    "value": "labor",
+    "label": "劳动节",
+    "description": "工匠蓝 · 节日限定",
+    "title": "劳动节，值得期待",
+    "theme": "ocean",
+    "icon": "sparkles",
+    "art": "gear",
+    "group": "china",
+    "month": 5,
+    "day": 1,
+    "message": "认真生活的人，都值得一束光。"
+  }
+]

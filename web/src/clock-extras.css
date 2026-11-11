@@ -1,0 +1,135 @@
+/* Nine additional clocks share actual time data, palettes and accessible labels. */
+.counter { --clock-text-space:220px; }
+.tear-calendar,.odometer-display,.cassette-display,.polaroid-display,.binary-display,.radar-display,.bamboo-display,.prism-display,.constellation-display { color:var(--accent); min-width:0; }
+.tear-calendar strong,.cassette-display>strong,.polaroid-photo>strong,.radar-display strong,.bamboo-display>strong,.prism-display strong,.constellation-display strong { font-size:clamp(13px,calc(var(--clock-text-space) / var(--clock-value-length)),40px); font-weight:550; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.tear-calendar { width:83%; max-width:235px; height:130px; border:1px solid color-mix(in srgb,var(--accent) 26%,transparent); border-radius:10px 10px 4px 4px; background:var(--card-bg,var(--panel)); box-shadow:0 3px 0 var(--soft),0 6px 0 color-mix(in srgb,var(--accent) 12%,transparent); text-align:center; }
+.tear-calendar>header { position:relative; background:var(--accent); color:var(--card-bg,var(--panel)); padding:12px 5px 7px; border-radius:9px 9px 0 0; font-size:8px; letter-spacing:1px; }
+.tear-calendar>header i { position:absolute; top:-7px; width:5px; height:15px; border-radius:3px; background:color-mix(in srgb,var(--accent) 65%,#59515e); border:1px solid color-mix(in srgb,var(--card-bg,var(--panel)) 60%,transparent); left:18%; }
+.tear-calendar>header i:last-child { left:auto; right:18%; }
+.tear-calendar>div { display:flex; align-items:center; justify-content:center; flex-direction:column; gap:3px; padding:10px 5px 6px; }
+.tear-calendar>div>span { font-size:9px; }
+.tear-calendar>footer { font-size:8px; border-top:1px dashed color-mix(in srgb,var(--accent) 22%,transparent); margin:0 12px; padding-top:6px; opacity:.8; }
+.odometer-display { width:100%; max-width:320px; text-align:center; }
+.odometer-display>span { font-size:9px; letter-spacing:2px; }
+.odometer-digits { display:flex; align-items:center; justify-content:center; gap:4px; margin:12px 0; }
+.odometer-wheel { position:relative; height:69px; width:40px; flex:0 1 40px; min-width:0; display:flex; align-items:center; flex-direction:column; justify-content:center; overflow:hidden; border:1px solid color-mix(in srgb,var(--accent) 25%,transparent); border-radius:7px; background:linear-gradient(var(--soft),var(--card-bg,var(--panel)) 40%,var(--card-bg,var(--panel)) 60%,var(--soft)); box-shadow:inset 0 4px 8px #00000008; }
+.odometer-wheel:after { content:''; position:absolute; inset:33px 0 auto; height:1px; background:currentColor; opacity:.12; }
+.odometer-wheel>small { font-size:14px; opacity:.22; line-height:16px; }
+.odometer-wheel>strong { font-size:29px; line-height:35px; font-weight:550; }
+.odometer-colon { font-size:20px; font-weight:400; }
+.odometer-display>footer { font-size:7px; letter-spacing:.8px; opacity:.75; }
+.odometer-tick-enter-active,.odometer-tick-leave-active { transition:transform .12s ease-out,opacity .12s; }
+.odometer-tick-enter-from { transform:translateY(-9px); opacity:0; }
+.odometer-tick-leave-to { transform:translateY(9px); opacity:0; }
+.cassette-display { width:100%; max-width:300px; border:1px solid color-mix(in srgb,var(--accent) 35%,transparent); border-radius:12px; padding:10px 14px 7px; background:var(--soft); box-shadow:inset 0 0 0 4px color-mix(in srgb,var(--card-bg,var(--panel)) 70%,transparent); text-align:center; }
+.cassette-display>header { display:flex; justify-content:space-between; align-items:center; font-size:7px; letter-spacing:.6px; }
+.cassette-display>header b { font-size:6px; font-weight:500; }
+.cassette-display>strong { display:block; line-height:1.1; margin:5px 0 3px; }
+.cassette-tape { position:relative; height:40px; border-radius:25px; border:1px solid color-mix(in srgb,var(--accent) 30%,transparent); background:var(--card-bg,var(--panel)); }
+.cassette-tape svg { height:100%; width:100%; }
+.cassette-reel { transform-box:fill-box; transform-origin:center; animation:cassette-spin 8s linear infinite; fill:none; stroke:currentColor; stroke-width:1.5; }
+.reel-center { fill:var(--card-bg,var(--panel)); }
+.cassette-tape>span { position:absolute; inset:0; display:grid; place-items:center; font-size:8px; }
+.cassette-display>footer { display:flex; justify-content:center; align-items:center; gap:12px; font-size:7px; padding-top:5px; }
+.cassette-display>footer i { width:3px; height:3px; border:1px solid currentColor; border-radius:50%; }
+.polaroid-display { padding:8px 8px 0; width:90%; max-width:280px; background:var(--card-bg,var(--panel)); border:1px solid color-mix(in srgb,var(--accent) 25%,transparent); box-shadow:3px 4px 0 color-mix(in srgb,var(--accent) 10%,transparent); transform:rotate(-2deg); }
+.polaroid-photo { position:relative; background:var(--soft); height:95px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:5px; overflow:hidden; }
+.polaroid-photo>svg { position:absolute; width:100%; height:100%; inset:0; fill:currentColor; opacity:.2; }
+.polaroid-photo>svg path:last-child { opacity:.5; }
+.polaroid-photo>strong,.polaroid-photo>span { z-index:1; position:relative; }
+.polaroid-photo>span { font-size:8px; }
+.polaroid-display>footer { padding:9px 5px; display:flex; align-items:center; justify-content:space-between; gap:7px; font:italic 9px Georgia,"Songti SC",serif; }
+.polaroid-display>footer i { font-size:15px; font-style:normal; }
+.binary-display { width:100%; max-width:320px; border:1px solid color-mix(in srgb,var(--accent) 26%,transparent); background:var(--soft); border-radius:12px; text-align:center; padding:10px 12px; }
+.binary-display>header { font:8px ui-monospace,monospace; letter-spacing:2px; opacity:.8; }
+.binary-columns { display:flex; justify-content:space-around; gap:10px; margin:12px 0 8px; }
+.binary-columns>div { flex:1; min-width:0; }
+.binary-lights { display:grid; grid-template-columns:repeat(3,5px); gap:5px; justify-content:center; margin-bottom:8px; }
+.binary-lights i { width:5px; height:5px; border-radius:50%; background:currentColor; opacity:.14; }
+.binary-lights i.lit { opacity:1; box-shadow:0 0 6px color-mix(in srgb,currentColor 40%,transparent); }
+.binary-columns strong { font:23px ui-monospace,monospace; display:block; }
+.binary-columns small { font-size:8px; opacity:.8; }
+.binary-display>footer { font-size:7px; letter-spacing:.6px; opacity:.75; }
+.radar-display { position:relative; width:140px; height:140px; --clock-text-space:115px; }
+.radar-display>svg { width:100%; height:100%; fill:none; stroke:currentColor; stroke-width:1; }
+.radar-display>svg>circle { opacity:.22; }
+.radar-grid { opacity:.13; }
+.radar-sweep { transform-origin:70px 70px; animation:radar-turn 12s linear infinite; }
+.radar-sector { fill:currentColor; stroke:none; opacity:.1; }
+.radar-beam { opacity:.65; }
+.radar-blip { fill:currentColor; stroke:none; animation:radar-pulse 3s ease-in-out infinite; }
+.radar-display>div { position:absolute; inset:0; display:flex; justify-content:center; align-items:center; flex-direction:column; gap:5px; }
+.radar-display strong { font-size:clamp(12px,calc(var(--clock-text-space) / var(--clock-value-length)),32px); }
+.radar-display span,.radar-display small { font-size:8px; }
+.radar-display small { opacity:.7; }
+.bamboo-display { position:relative; width:92%; max-width:310px; padding:15px 20px 12px; border-top:1px solid color-mix(in srgb,var(--accent) 25%,transparent); border-bottom:1px solid color-mix(in srgb,var(--accent) 25%,transparent); background:repeating-linear-gradient(90deg,var(--soft) 0px,var(--soft) 15px,color-mix(in srgb,var(--accent) 18%,var(--soft)) 16px,var(--soft) 17px); text-align:center; }
+.scroll-cap { position:absolute; top:-7px; bottom:-7px; width:9px; border:1px solid color-mix(in srgb,var(--accent) 35%,transparent); border-radius:4px; background:linear-gradient(90deg,var(--accent),color-mix(in srgb,var(--accent) 35%,var(--soft)),var(--accent)); }
+.cap-left { left:-3px; }.cap-right { right:-3px; }
+.scroll-seal { position:absolute; right:14px; top:12px; border:1px solid currentColor; padding:3px 2px; font:9px "Songti SC",serif; opacity:.7; }
+.bamboo-display>header { font:9px "Songti SC",serif; letter-spacing:2px; }
+.bamboo-display>strong { display:block; margin:10px 0 4px; font-family:Georgia,"Songti SC",serif; font-weight:400; }
+.bamboo-display>span:not(.scroll-seal) { font:9px "Songti SC",serif; letter-spacing:2px; }
+.bamboo-display>footer { margin-top:9px; font:8px "Songti SC",serif; opacity:.75; }
+.prism-display { position:relative; width:100%; max-width:300px; height:135px; border:1px solid color-mix(in srgb,var(--accent) 22%,transparent); border-radius:15px; overflow:hidden; background:linear-gradient(130deg,var(--soft),var(--card-bg,var(--panel))); }
+.prism-display>svg { position:absolute; inset:0; width:100%; height:100%; stroke:currentColor; stroke-width:.7; fill:none; opacity:.28; }
+.prism-display>svg path:first-child { fill:var(--soft); }
+.prism-display>svg path:last-child { stroke-width:2; opacity:.4; }
+.prism-display>div,.constellation-display>div { position:relative; height:100%; display:flex; justify-content:center; align-items:center; flex-direction:column; gap:8px; z-index:1; }
+.prism-display span,.constellation-display span { font-size:9px; letter-spacing:1px; }
+.prism-display small,.constellation-display small { font-size:8px; opacity:.8; }
+.prism-glint { pointer-events:none; position:absolute; top:-80%; bottom:-80%; width:15%; left:-25%; transform:rotate(30deg); background:linear-gradient(90deg,transparent,#ffffff35,transparent); animation:prism-pass 7s ease-in-out infinite; }
+.constellation-display { position:relative; width:100%; max-width:300px; height:140px; }
+.constellation-display>svg { position:absolute; inset:0; width:100%; height:100%; fill:currentColor; }
+.constellation-display>svg>path:first-child { fill:none; stroke:currentColor; stroke-width:.8; opacity:.25; }
+.constellation-star { animation:star-breathe 4s ease-in-out infinite alternate; animation-delay:var(--star-delay); }
+.constellation-spark { opacity:.8; }
+.style-picker { max-height:300px; overflow-y:auto; overscroll-behavior:contain; padding:3px; scrollbar-width:thin; }
+.counter-is-paused .clock-decoration-motion { animation-play-state:paused; }
+.hero-clock .counter { --clock-text-space:230px; --card-bg:#302843; --soft:#ffffff20; }
+.hero-clock .binary-display,.hero-clock .cassette-display,.hero-clock .tear-calendar { color:#fff; }
+.hero-clock .tear-calendar>header { background:#ffffff22; color:#fff; }
+.focus-content .counter { --clock-text-space:300px; }
+.stage-main .counter { --clock-text-space:400px; --card-bg:#222137; --soft:#ffffff20; }
+.stage-main .tear-calendar { max-width:330px; height:190px; }
+.stage-main .tear-calendar>header { padding:16px 10px 11px; font-size:10px; background:#ffffff22; color:#fff; }
+.stage-main .tear-calendar>div { padding:20px 10px 12px; gap:10px; }
+.stage-main .tear-calendar strong,.stage-main .cassette-display>strong,.stage-main .polaroid-photo>strong,.stage-main .bamboo-display>strong,.stage-main .prism-display strong,.stage-main .constellation-display strong { font-size:clamp(20px,calc(var(--clock-text-space) / var(--clock-value-length)),65px); }
+.stage-main .tear-calendar>footer { font-size:10px; padding-top:9px; }
+.stage-main .odometer-display { max-width:500px; }.stage-main .odometer-wheel { height:105px; width:60px; flex-basis:60px; }.stage-main .odometer-wheel>strong { font-size:46px; line-height:55px; }.stage-main .odometer-wheel>small { font-size:20px; line-height:24px; }.stage-main .odometer-wheel:after { top:51px; }
+.stage-main .cassette-display { max-width:420px; padding:16px 20px 10px; }.stage-main .cassette-tape { height:50px; }.stage-main .cassette-display>header { font-size:10px; }.stage-main .cassette-display>footer { font-size:9px; }
+.stage-main .polaroid-display { max-width:390px; }.stage-main .polaroid-photo { height:150px; }.stage-main .polaroid-display>footer { font-size:12px; }
+.stage-main .binary-display { max-width:440px; padding:16px 20px; }.stage-main .binary-columns { margin:18px 0 12px; }.stage-main .binary-columns strong { font-size:34px; }.stage-main .binary-lights { grid-template-columns:repeat(3,7px); gap:7px; }.stage-main .binary-lights i { width:7px; height:7px; }
+.stage-main .radar-display { width:210px; height:210px; --clock-text-space:175px; }.stage-main .radar-display strong { font-size:clamp(16px,calc(var(--clock-text-space) / var(--clock-value-length)),48px); }
+.stage-main .bamboo-display { max-width:450px; padding:22px 28px 18px; }.stage-main .bamboo-display>header { font-size:13px; }.stage-main .bamboo-display>footer { font-size:11px; }.stage-main .scroll-seal { font-size:13px; right:20px; top:20px; }
+.stage-main .prism-display,.stage-main .constellation-display { height:210px; max-width:450px; }.stage-main .prism-display span,.stage-main .constellation-display span { font-size:12px; }.stage-main .prism-display small,.stage-main .constellation-display small { font-size:10px; }
+.list-view .counter { --clock-text-space:115px; }.list-view .tear-calendar { height:86px; }.list-view .tear-calendar>header { padding:5px; font-size:5px; letter-spacing:0; }.list-view .tear-calendar>div { padding:5px 2px; gap:2px; }.list-view .tear-calendar strong { font-size:24px; }.list-view .tear-calendar>div>span,.list-view .tear-calendar>footer { font-size:6px; }.list-view .tear-calendar>footer { padding-top:3px; margin:0 5px; }
+.list-view .odometer-wheel { height:51px; }.list-view .odometer-wheel>strong { font-size:20px; line-height:25px; }.list-view .odometer-wheel>small { font-size:10px; line-height:12px; }.list-view .odometer-wheel:after { top:25px; }.list-view .odometer-digits { margin:6px 0; gap:2px; }.list-view .odometer-display>span { font-size:7px; letter-spacing:0; }.list-view .odometer-display>footer { font-size:5px; letter-spacing:0; }
+.list-view .cassette-display { padding:7px 8px; }.list-view .cassette-display>header { font-size:5px; letter-spacing:0; }.list-view .cassette-display>strong { margin:3px 0; font-size:24px; }.list-view .cassette-tape { height:28px; }.list-view .cassette-tape>span,.list-view .cassette-display>footer { font-size:5px; }
+.list-view .polaroid-display { padding:5px 5px 0; }.list-view .polaroid-photo { height:65px; }.list-view .polaroid-photo>strong { font-size:24px; }.list-view .polaroid-photo>span { font-size:6px; }.list-view .polaroid-display>footer { font-size:5px; padding:4px 0; }.list-view .polaroid-display>footer i { font-size:9px; }
+.list-view .binary-display { padding:7px; }.list-view .binary-display>header { font-size:6px; letter-spacing:0; }.list-view .binary-columns { gap:4px; margin:7px 0 3px; }.list-view .binary-lights { grid-template-columns:repeat(3,3px); gap:3px; margin-bottom:3px; }.list-view .binary-lights i { width:3px; height:3px; }.list-view .binary-columns strong { font-size:15px; }.list-view .binary-columns small { font-size:6px; }.list-view .binary-display>footer { display:none; }
+.list-view .radar-display { height:90px; width:90px; --clock-text-space:75px; }.list-view .radar-display strong { font-size:clamp(10px,calc(var(--clock-text-space) / var(--clock-value-length)),23px); }.list-view .radar-display span,.list-view .radar-display small { font-size:6px; }
+.list-view .bamboo-display { padding:9px 13px 7px; }.list-view .bamboo-display>strong { font-size:24px; margin:5px 0; }.list-view .bamboo-display>header,.list-view .bamboo-display>footer,.list-view .bamboo-display>span:not(.scroll-seal) { font-size:6px; letter-spacing:0; }.list-view .scroll-seal { font-size:6px; right:7px; top:9px; padding:2px 1px; }
+.list-view .prism-display,.list-view .constellation-display { height:90px; }.list-view .prism-display>div,.list-view .constellation-display>div { gap:5px; }.list-view .prism-display strong,.list-view .constellation-display strong { font-size:24px; }.list-view .prism-display span,.list-view .constellation-display span,.list-view .prism-display small,.list-view .constellation-display small { font-size:6px; letter-spacing:0; }
+@keyframes cassette-spin { to { transform:rotate(360deg); } }
+@keyframes radar-turn { to { transform:rotate(360deg); } }
+@keyframes radar-pulse { 0%,100% { opacity:.2; } 50% { opacity:1; } }
+@keyframes prism-pass { 0%,60% { left:-25%; } 100% { left:135%; } }
+@keyframes star-breathe { from { opacity:.3; } to { opacity:1; } }
+@media(max-width:520px) {
+ .style-picker { max-height:290px; }
+ .stage-main .counter { --clock-text-space:230px; }
+ .stage-main .tear-calendar { height:158px; max-width:260px; }.stage-main .tear-calendar>div { padding:12px 5px 8px; }
+ .stage-main .odometer-wheel { height:80px; }.stage-main .odometer-wheel>strong { font-size:31px; line-height:39px; }.stage-main .odometer-wheel>small { font-size:15px; line-height:18px; }.stage-main .odometer-wheel:after { top:39px; }
+ .stage-main .cassette-display { padding:12px 15px 8px; }.stage-main .cassette-display>header { font-size:7px; }.stage-main .cassette-tape { height:42px; }
+ .stage-main .polaroid-photo { height:125px; }.stage-main .polaroid-display>footer { font-size:9px; }
+ .stage-main .binary-display { padding:12px; }.stage-main .binary-columns strong { font-size:27px; }
+ .stage-main .radar-display { width:175px; height:175px; --clock-text-space:145px; }
+ .stage-main .bamboo-display { padding:18px; }.stage-main .bamboo-display>header { font-size:9px; }.stage-main .bamboo-display>footer { font-size:8px; }
+ .stage-main .prism-display,.stage-main .constellation-display { height:175px; }.stage-main .prism-display span,.stage-main .constellation-display span { font-size:9px; }.stage-main .prism-display small,.stage-main .constellation-display small { font-size:8px; }
+}
+@media(prefers-reduced-motion:reduce) { .clock-decoration-motion { animation:none!important; }.odometer-tick-enter-active,.odometer-tick-leave-active { transition:none; } }
+[data-motion="still"] .clock-decoration-motion { animation:none!important; }
+
+.list-view :is(.tear-calendar,.cassette-display,.polaroid-photo,.bamboo-display,.prism-display,.constellation-display)>strong,.list-view .tear-calendar>div>strong,.list-view .prism-display>div>strong,.list-view .constellation-display>div>strong{font-size:clamp(10px,calc(115px / var(--clock-value-length)),24px)}
+.binary-columns strong{font-size:clamp(9px,calc(45px / var(--part-length,2)),23px)}.stage-main .binary-columns strong{font-size:clamp(12px,calc(80px / var(--part-length,2)),34px)}.list-view .binary-columns strong{font-size:clamp(6px,calc(25px / var(--part-length,2)),15px)}
+.counter-arrived .clock-decoration-motion{animation-play-state:paused}
